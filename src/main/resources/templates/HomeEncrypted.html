@@ -1,0 +1,56 @@
+
+<!doctype html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <link rel="stylesheet" th:href="@{/CSS/Style.css}">
+  <meta charset="utf-8">
+  <title>Home</title>
+</head>
+
+<body bgcolor="#1E1A1A">
+<div>
+  <form method="post">
+    <div>
+      <input type="text" name="nome">
+    </div>
+  </form>
+</div>
+<div>
+    <a href="/home"style="border: 2px solid #04AA6D;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: aliceblue;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 20px;">Decrypted</a>
+</div>
+<div align="center">
+  <table class="container"style="width: 80%;">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>RG</th>
+      <th>Created</th>
+      <th>Updated</th>
+      <th>Deleted</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cliente : ${clientes}">
+      <td><span th:text="${cliente.id_cliente}"></span></a></td>
+      <td><span th:text="${cliente.nome}"></span></a></td>
+      <td><span th:text="${cliente.cpf}"></span></td>
+      <td><span th:text="${cliente.rg}"></span></td>
+      <td><span th:text="${cliente.created}"></span></td>
+      <td><span th:text="${cliente.updated}"></span></td>
+      <td><span th:text="${cliente.deleted}"></span></td>
+    </tr>
+    </tbody>
+
+  </table>
+</div>
+</body>
+</html>

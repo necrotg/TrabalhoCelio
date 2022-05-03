@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" th:href="@{/CSS/Style.css}">
+    <meta charset="utf-8">
+    <title>Login</title>
+</head>
+<body bgcolor= #383838>
+<div align="center">
+    <div>
+        <form method="post">
+            <div class="container" >
+                <input height="10" type="text" placeholder="Enter Username" name="username" required>
+                <input height="10" type="password" placeholder="Enter Password" name="password" required>
+                <div>
+                    <button name="submit" type="submit">Login</button>
+                </div>
+                <div>
+                    <label>
+                        <input class="remember" type="checkbox" checked="checked" name="remember"> <label style="color: black">Remember me</label>
+                    </label>
+                    <div>
+                        <a href="/criarConta">Criar Conta</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+</div>
+</body>
+</html>
